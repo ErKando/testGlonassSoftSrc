@@ -1,0 +1,249 @@
+.wrapper {
+  padding: 0 50px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.tables {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+}
+
+.table__inner {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 10px;
+}
+
+.table__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  text-align: center;
+}
+
+.table__row input {
+  text-align: center;
+  padding: 7px 0;
+  padding-left: 15px;
+  width: calc(100% - 20px);
+}
+
+.table--3 .table__row {
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.table--3 input {
+  padding: 7px 0;
+  padding-left: 14px;
+  width: calc(100% - 20px);
+}
+
+.table__result {
+  display: -ms-grid;
+  display: grid;
+}
+
+.table__result form {
+  margin-bottom: 10px;
+}
+
+.table__btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 7px 0;
+}
+
+.table__btn--calc {
+  width: 100%;
+  margin-top: 0;
+}
+
+.charts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  margin-top: 50px;
+}
+
+.chart__inner {
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: #EFEFEF;
+  position: relative;
+}
+
+.chart__inner::after,
+.chart__inner::before {
+  content: "";
+  position: absolute;
+  background-color: #C5C5C5;
+}
+
+.chart__inner::after {
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 2px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.chart__inner::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.chart__dots-field {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.chart__dot-tooltip {
+  padding: 3px 10px;
+  background-color: #fff;
+  font-size: 10px;
+  position: absolute;
+  top: 120%;
+  right: -100%;
+  z-index: 100;
+  white-space: nowrap;
+  border-radius: 4px;
+  display: none;
+}
+
+.chart__dot {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #1E2C3D;
+  -webkit-transform: translate(50%, -50%);
+      -ms-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.chart__dot:hover .chart__dot-tooltip {
+  display: block;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.max-y-value {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.max-x-value {
+  position: absolute;
+  top: 50%;
+  left: 101%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 100;
+}
+
+.zero-value {
+  position: absolute;
+  top: 51%;
+  left: 46%;
+}
+
+.risks {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+.risks__labelY {
+  position: absolute;
+  font-size: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding-right: 10px;
+}
+
+.risks__labelX {
+  position: absolute;
+  font-size: 10px;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+  padding-top: 7px;
+}
+
+@media (max-width: 700px) {
+  .tables {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .charts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+}

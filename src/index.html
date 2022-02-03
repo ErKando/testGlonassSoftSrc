@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/head.html',{
+	"title":"Test GlonassSoft"
+	})
+	<body>
+		@@include('html/header.html',{})
+		<main class="page">
+			<div class="wrapper">
+				<div class="tables">
+					<div class="table table--1">
+						<div class="table__inner">
+							<div class="table__row">
+								<span>X</span>
+								<span>Y</span>
+								<span></span>
+							</div>
+							<form class="table__row">
+								<input type="number">
+								<input type="number">
+								<button class="js-remove" type="button">Delete</button>
+							</form>
+						</div>
+						<button class="table__btn table__btn--add" type="button">Add</button>
+					</div>
+					<div class="table table--2">
+						<div class="table__inner">
+							<div class="table__row">
+								<span>X</span>
+								<span>Y</span>
+								<span></span>
+							</div>
+							<form class="table__row">
+								<input type="number">
+								<input type="number">
+								<button class="js-remove" type="button">Delete</button>
+							</form>
+						</div>
+						<button class="table__btn table__btn--add" type="button">Add</button>
+					</div>
+					<div class="table table--3">
+						<div class="table__inner">
+							<div class="table__row">
+								<span>X</span>
+								<span>Y</span>
+							</div>
+							<div class="table__result"></div>
+						</div>
+						<button class="table__btn table__btn--calc" type="button">Calculate</button>
+					</div>
+				</div>
+				<div class="charts">
+					<div class="chart1">
+						<div class="chart__inner">
+							<span class="zero-value">0</span>
+							<div class="chart__dots-field"></div>
+							<div class="risks"></div>
+							<canvas width="253" height="253" id="chart_1"></canvas>
+							<canvas width="253" height="253" id="chart_11"></canvas>
+						</div>
+					</div>
+					<div class="chart2">
+						<div class="chart__inner">
+							<span class="zero-value">0</span>
+							<div class="chart__dots-field"></div>
+							<div class="risks"></div>
+							<canvas width="253" height="253" id="chart_2"></canvas>
+							<canvas width="253" height="253" id="chart_22"></canvas>
+						</div>
+					</div>
+					<div class="chart3">
+						<div class="chart__inner">
+							<span class="zero-value">0</span>
+							<div class="chart__dots-field"></div>
+							<div class="risks"></div>
+							<canvas width="253" height="253" id="chart_3"></canvas>
+							<canvas width="253" height="253" id="chart_33"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<template id="table-row-tmp">
+			<form class="table__row">
+				<input type="number">
+				<input type="number">
+				<button class="js-remove" type="button">Delete</button>
+			</form>
+		</template>
+
+		<template id="table-row-tmp--calc">
+			<form class="table__row">
+				<input disabled type="number">
+				<input disabled type="number">
+			</form>
+		</template>
+			
+		@@include('html/footer.html',{})
+		<script src="js/app.min.js"></script>
+	</body>
+</html>
